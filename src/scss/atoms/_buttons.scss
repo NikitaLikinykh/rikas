@@ -1,0 +1,138 @@
+.burger {
+    width: 30px;
+    height: 18px;
+    background: url('../images/burger.svg')
+}
+
+.locale {
+    display: flex;
+    gap: 8px;
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+
+    &__flag {
+        width: 36px;
+        height: 24px;
+    }
+
+    &__code {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}
+
+.logo {
+    width: 84px;
+    height: 88px;
+
+    img {
+        width: inherit;
+        height: inherit;
+    }
+}
+
+.email {
+    display: none;
+}
+
+.swiper-button-next {
+    background: rgba(221, 42, 27, 0.50);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 24px;
+    height: 24px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.swiper-button-prev {
+    transform: rotate(-180deg);
+    background: rgba(221, 42, 27, 0.50);
+    width: 24px;
+    height: 24px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.slider-dot {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+
+    &__item {
+        width: 12px;
+        height: 12px;
+        background: $c-gray;
+
+        &_active {
+            background: $c-red;
+        }
+
+        &:hover {
+            background: $c-red;
+        }
+    }
+}
+
+.email {
+    display: none;
+    padding-left: 32px;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+
+    &::before {
+        content: "";
+        width: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 24px;
+        position: absolute;
+        left: 0px;
+        background: url('../images/email.svg')
+    }
+}
+
+@include breakpoint('lg') {
+    .logo {
+        width: 115px;
+        height: 120px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .email {
+        display: block;
+    }
+
+    .locale {
+        align-items: center;
+    }
+
+    .swiper-button-next {
+        width: 48px;
+        height: 48px;
+    }
+
+    .swiper-button-prev {
+        width: 48px;
+        height: 48px;
+    }
+}

@@ -1,0 +1,60 @@
+.title {
+    padding: 8px 16px;
+    width: fit-content;
+    // border: 1px solid;
+    position: relative;
+
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 66px;
+        height: 24px;
+        border-top: 2px solid $c-red;
+        border-left: 2px solid $c-red;
+        box-sizing: border-box;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 66px;
+        height: 24px;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+        box-sizing: border-box;
+    }
+
+}
+
+.title_white {
+    color: white;
+
+    &::before {
+        border-top: 2px solid $c-red;
+        border-left: 2px solid $c-red;
+    }
+
+    &::after {
+        border-bottom: 2px solid white;
+        border-right: 2px solid white;
+    }
+}
+
+@include breakpoint('lg') {
+    .title {
+        padding: 14px 24px;
+        font-size: 36px;
+    }
+}

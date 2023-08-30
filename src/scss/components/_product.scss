@@ -1,0 +1,175 @@
+.product-card {
+  position: relative;
+  max-width: 295px;
+  width: 100%;
+  padding: 12px;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 66px;
+    height: 24px;
+    border-top: 2px solid $c-red;
+    border-left: 2px solid $c-red;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 66px;
+    height: 24px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    margin-top: 12px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__subtitle {
+    margin-top: 12px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  @include breakpoint('lg') {
+    max-width: 360px;
+    margin: 0px;
+    padding: 24px;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+      line-height: 36px
+    }
+  }
+}
+
+.technical-info__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.technical-info__card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  &-head {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  &-body {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    width: 100%;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-title {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &-img {
+    max-width: 430px;
+    border: 1px solid lightgray;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &-title_desktop {
+    display: none;
+  }
+
+  @include breakpoint('lg') {
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+    &-body {
+      max-width: 648px;
+      width: 100%;
+      max-height: 430px;
+      overflow: hidden;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px;
+    }
+
+    &-info {
+      margin: 0 auto;
+      margin-top: 25px;
+    }
+
+    &-img {
+      width: 430px;
+      height: 430px;
+      text-align: center;
+      vertical-align: center;
+    }
+
+    &-title_mobile {
+      display: none;
+    }
+
+    &-title_desktop {
+      display: inline-block;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px;
+    }
+  }
+}
+
+
+.technical-info__card:nth-child(odd) .technical-info__card-head {
+  flex-direction: row-reverse;
+}
+
+@include breakpoint('lg') {
+  .technical-info__card:nth-child(odd) .technical-info__card-head {
+    flex-direction: row;
+  }
+
+  .technical-info__card:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}

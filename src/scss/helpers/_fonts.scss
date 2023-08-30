@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'GtEestiPro';
+    src: local(''),
+        url('../fonts/gteestiprodisplay_light.otf') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GtEestiPro';
+    src: local(''),
+        url('../fonts/gteestiprodisplay_regular.otf') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GtEestiPro';
+    src: local(''),
+        url('../fonts/gteestiprodisplay_medium.otf') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GtEestiPro';
+    src: local(''),
+        url('../fonts/gteestiprodisplay_bold.otf') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}

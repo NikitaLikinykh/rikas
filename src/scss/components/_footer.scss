@@ -1,0 +1,30 @@
+.footer {
+  background: $c-black-500;
+  padding-top: 96px;
+  padding-bottom: 36px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    border-bottom: 2px solid $c-red-600;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.email_footer {
+  display: block;
+}
+
+.social_footer {
+  display: flex;
+  gap: 15px;
+}
